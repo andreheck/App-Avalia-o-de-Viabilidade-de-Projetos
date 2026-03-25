@@ -1556,6 +1556,9 @@ const ZOHO_CONFIG = {
   SHEET_PROJETOS: 'Projetos',
   SHEET_MEMBROS:  'Membros_Projeto',
 
+  // URL de hospedagem (GitHub Pages)
+  REDIRECT_URI: 'https://andreheck.github.io/App-Avalia-o-de-Viabilidade-de-Projetos/',
+
   // Escopos necessários (não altere)
   SCOPES: 'ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ',
 };
@@ -1568,7 +1571,7 @@ const ZohoAuth = {
 
   // Abre popup de autorização Zoho
   authorize() {
-    const redirectUri = encodeURIComponent(window.location.href.split('?')[0]);
+    const redirectUri = encodeURIComponent('https://andreheck.github.io/App-Avalia-o-de-Viabilidade-de-Projetos/');
     const url = `https://accounts.zoho.com/oauth/v2/auth`
       + `?response_type=token`
       + `&client_id=${ZOHO_CONFIG.CLIENT_ID}`
